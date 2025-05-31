@@ -1,0 +1,13 @@
+.content-container {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+
+@media screen and (max-width: 900) {
+    .content-container {
+        width: 100%;
+    }
+}

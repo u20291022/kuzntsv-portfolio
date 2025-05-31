@@ -1,9 +1,33 @@
 .page-section {
-    padding: 48px 56px;
-    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 36px 56px 48px 56px;
+    height: var(--vh-compensation);
     box-sizing: border-box;
     scroll-snap-align: start;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow-y: hidden;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: px;
+    bottom: 48px;
+    right: 56px;
+}
+
+@media screen and (max-width: 500) {
+    .scroll-down {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900) {
+    .small-image {
+        background-size: contain;
+        background-position: bottom;
+    }
 }

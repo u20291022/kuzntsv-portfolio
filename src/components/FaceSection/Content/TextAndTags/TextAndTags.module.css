@@ -1,0 +1,35 @@
+.text-and-tags-container {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.face-text {
+    text-transform: uppercase;
+}
+
+.tags-container {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    box-sizing: border-box;
+    border: 1px solid var(--text-color);
+    border-radius: 47px;
+    text-transform: uppercase;
+    letter-spacing: -0.6px;
+}
+/* screen and ((max-height: 700) and (max-width: 400)) */
+@media screen and ((max-height: 700) and (max-width: 400)),
+    screen and (max-height: 480px),
+    screen and ((height > 600px) and (max-width: 500)) {
+    .tags-container {
+        display: none;
+    }
+}

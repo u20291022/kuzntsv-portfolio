@@ -1,12 +1,15 @@
 .main-container {
     position: relative;
     width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
-    background-color: #000;
-}
+    height: var(--vh-compensation);
+    overflow-y: scroll; 
+    background-color: var(--background-color);
 
-.scroll-proximity {
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
+    /* hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }

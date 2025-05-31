@@ -1,3 +1,12 @@
+:root {
+    --vh-compensation: 100vh;
+
+    --text-color: #fff;
+    --subtext-color: #888;
+    --background-color: #000;
+    --card-background-color: #131313;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,29 +14,84 @@
     text-decoration: none;
     border: none;
     outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: hidden;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 h1 {
     font-size: 48px;
-    font-weight: 400;
+    letter-spacing: -1.44px;
+    margin-top: -0.4rem;
+    margin-bottom: -0.1rem;
+    line-height: 1;
 }
 
 h2 {
     font-size: 24px;
-    font-weight: 400;
+    letter-spacing: -0.16px;
+    line-height: 0.6;
 }
 
+a,
+span,
 p {
     font-size: 16px;
+    letter-spacing: -0.44px;
+    line-height: 0.7;
+}
+
+h1,
+h2,
+a,
+span,
+p {
+    color: var(--text-color);
     font-weight: 400;
 }
 
 .accent {
-    font-size: 16px;
     font-weight: 600;
 }
 
-.subtext {
+.subtext-big,
+.subtext-small {
+    color: var(--subtext-color);
+}
+.subtext-small {
     font-size: 12px;
-    font-weight: 400;
+    letter-spacing: -0.36px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.25) {
+    :root {
+        --vh-compensation: 125.5vh; /* zoom 0.8 */
+    }
+    html {
+        zoom: 0.8; /* 125% */
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+    :root {
+        --vh-compensation: 148.8vh; /* zoom 0.667 */
+    }
+    html {
+        zoom: 0.667; /* 150% */
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    :root {
+        --vh-compensation: 200vh; /* zoom 0.5 */
+    }
+    html {
+        zoom: 0.5; /* 200% */
+    }
 }

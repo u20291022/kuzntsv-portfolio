@@ -1,0 +1,39 @@
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 4px 4px 48px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 4px solid var(--text-color);
+    border-radius: 47px;
+    text-transform: uppercase;
+    width: 896px; /* for pixel perfect */
+}
+
+.button-container img {
+    width: 67px;
+    height: 67px;
+    flex-shrink: 0;
+}
+
+.filled-button {
+    background-color: var(--text-color);
+    width: 440px; /* for pixel perfect */
+}
+.filled-button h1 {
+    color: var(--background-color);
+    letter-spacing: -1.9px;
+}
+
+@media screen and (max-width: 500) {
+    .button-container, .filled-button {
+        width: 100%;
+    }
+}
