@@ -6,6 +6,7 @@
     --background-color: #000;
     --card-background-color: #131313;
     --border-color: #1c1c1c;
+    --accent-color: #FFCC00;
 
     --h1-font-size: 48px;
     --h2-font-size: 24px;
@@ -44,6 +45,7 @@ h2 {
     font-size: var(--h2-font-size);
     letter-spacing: -0.16px;
     line-height: 0.6;
+    font-weight: 500;
 }
 
 a,

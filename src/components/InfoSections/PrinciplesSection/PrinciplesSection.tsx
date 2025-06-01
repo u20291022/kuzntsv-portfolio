@@ -4,7 +4,7 @@ import styles from "./PrinciplesSection.module.css";
 
 export default function PrinciplesSection() {
     return (
-        <PageSection id="principles-section" fullHeightOnMobile={true}>
+        <PageSection heightByContent={true} id="principles-section">
             <InfoHeader
                 category="Мои принципы"
                 title="художник без принципов просто ремесленник."
@@ -76,9 +76,7 @@ function Principles({
                     <Principal
                         key={index}
                         order={`${orderNumber < 10 ? "0" : ""}${orderNumber}`}
-                        title={principal.title}
-                        text={principal.text}
-                        isEmpty={!!principal.isEmpty}
+                        {...principal}
                     />
                 );
             })}
@@ -95,7 +93,7 @@ function Principal({
     order: string;
     title: string;
     text: string;
-    isEmpty: boolean;
+    isEmpty?: boolean;
 }) {
     if (isEmpty) {
         return <div className={styles["principal-container"]}></div>;

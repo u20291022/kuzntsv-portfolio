@@ -8,8 +8,12 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow-x: hidden;
     overflow-y: hidden;
     border-bottom: 1px solid var(--border-color);
+}
+.page-section[height-by-content=true] {
+    height: auto;
 }
 
 .scroll-down {

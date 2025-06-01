@@ -9,6 +9,7 @@ export default function PageSection({
     id,
     smallImage,
     fullHeightOnMobile,
+    heightByContent
 }: {
     children: React.ReactNode;
     backgroundImage?: string;
@@ -17,6 +18,7 @@ export default function PageSection({
     id: string;
     smallImage?: boolean;
     fullHeightOnMobile?: boolean;
+    heightByContent?: boolean
 }) {
     const style: CSSProperties = {
         backgroundImage: backgroundColor
@@ -36,6 +38,7 @@ export default function PageSection({
             style={style}
             id={id}
             full-height={`${fullHeightOnMobile}`}
+            height-by-content={`${heightByContent}`}
         >
             {children}
             {nextPageId && (
