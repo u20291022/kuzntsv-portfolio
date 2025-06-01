@@ -7,7 +7,7 @@ import ScaleManager from "@/utils/ScaleManager";
 const manrope = Manrope({
     variable: "--font-manrope",
     subsets: ["cyrillic", "latin"],
-    weight: ["400", "600"],
+    weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {

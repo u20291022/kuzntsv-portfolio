@@ -2,14 +2,14 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 36px 56px 48px 56px;
+    padding: 48px 56px 48px 56px;
     height: var(--vh-compensation);
     box-sizing: border-box;
-    scroll-snap-align: start;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow-y: hidden;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .scroll-down {
@@ -19,15 +19,21 @@
     right: 56px;
 }
 
-@media screen and (max-width: 500) {
+@media screen and (max-width: 500px) {
     .scroll-down {
         display: none;
     }
 }
 
-@media screen and (max-width: 900) {
+@media screen and (max-width: 900px) {
     .small-image {
         background-size: contain;
         background-position: bottom;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .page-section[full-height=true] {
+        height: auto;
     }
 }

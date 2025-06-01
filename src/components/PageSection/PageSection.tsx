@@ -8,13 +8,15 @@ export default function PageSection({
     nextPageId,
     id,
     smallImage,
+    fullHeightOnMobile,
 }: {
     children: React.ReactNode;
-    backgroundImage: string;
+    backgroundImage?: string;
     backgroundColor?: string;
     nextPageId?: string;
     id: string;
     smallImage?: boolean;
+    fullHeightOnMobile?: boolean;
 }) {
     const style: CSSProperties = {
         backgroundImage: backgroundColor
@@ -29,7 +31,12 @@ export default function PageSection({
     const smallImageClass = smallImage ? styles["small-image"] : "";
 
     return (
-        <section className={`${styles["page-section"]} ${smallImageClass}`} style={style} id={id}>
+        <section
+            className={`${styles["page-section"]} ${smallImageClass}`}
+            style={style}
+            id={id}
+            full-height={`${fullHeightOnMobile}`}
+        >
             {children}
             {nextPageId && (
                 <a className={styles["scroll-down"]} href={scrollDownHref}>

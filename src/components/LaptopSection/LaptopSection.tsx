@@ -6,6 +6,7 @@ export default function LaptopSection() {
             smallImage={true}
             id="laptop-section"
             backgroundImage="url('art/laptop.png')"
+            nextPageId="principles-section"
         >
             <></>
         </PageSection>
