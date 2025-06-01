@@ -61,6 +61,7 @@ p {
     font-size: var(--p-font-size);
     letter-spacing: -0.44px;
     line-height: 0.7;
+    font-weight: 400;
 }
 
 h1,
@@ -69,7 +70,6 @@ a,
 span,
 p {
     color: var(--text-color);
-    font-weight: 400;
 }
 
 .accent {

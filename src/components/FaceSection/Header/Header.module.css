@@ -24,7 +24,6 @@
     gap: 16px;
     border: 1px solid var(--text-color);
     border-radius: 47px;
-    box-sizing: border-box;
     padding: 12px 24px;
     flex-wrap: wrap;
     margin: -12px 0;

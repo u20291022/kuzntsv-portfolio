@@ -4,7 +4,6 @@
     flex-direction: column;
     padding: 48px 56px 48px 56px;
     height: var(--vh-compensation);
-    box-sizing: border-box;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -27,7 +27,6 @@
     background-repeat: no-repeat;
     background-size: 150px auto;
     padding: 32px;
-    box-sizing: border-box;
     border-radius: 24px;
     /* width: 440px; for pixel perfect */
     min-width: 440px;

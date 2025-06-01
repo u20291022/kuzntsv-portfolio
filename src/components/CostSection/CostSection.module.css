@@ -1,0 +1,40 @@
+.blocks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-blocks-container {
+    display: flex;
+    gap: 16px;
+}
+
+.info-block-container {
+    position: relative;
+    padding: 48px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--card-background-color);
+    width: 100%;
+    height: 450px;
+}
+
+.info-block-title {
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    line-height: 1;
+}
+
+.info-block-value {
+    position: absolute;
+    left: 48px;
+    bottom: 48px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 750px) {
+    .info-blocks-container {
+        flex-direction: column;
+    }
+}
