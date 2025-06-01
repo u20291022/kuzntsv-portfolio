@@ -2,14 +2,6 @@
     position: relative;
     width: 100%;
     height: var(--vh-compensation);
-    overflow-y: scroll; 
     background-color: var(--background-color);
-
     scroll-behavior: smooth;
-    /* hide scrollbar */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    ::-webkit-scrollbar {
-        display: none;
-    }
 }

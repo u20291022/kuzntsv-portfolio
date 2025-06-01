@@ -6,7 +6,7 @@
     --background-color: #000;
     --card-background-color: #131313;
     --border-color: #1c1c1c;
-    --accent-color: #FFCC00;
+    --accent-color: #ffcc00;
 
     --h1-font-size: 48px;
     --h2-font-size: 24px;
@@ -22,10 +22,17 @@
     border: none;
     outline: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    /* hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 body {
-    overflow-y: hidden;
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
