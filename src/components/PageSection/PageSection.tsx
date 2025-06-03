@@ -4,6 +4,7 @@ import styles from "./PageSection.module.css";
 export default function PageSection({
     children,
     backgroundImage,
+    backgroundVideo,
     backgroundColor,
     nextPageId,
     id,
@@ -13,6 +14,7 @@ export default function PageSection({
 }: {
     children: React.ReactNode;
     backgroundImage?: string;
+    backgroundVideo?: string;
     backgroundColor?: string;
     nextPageId?: string;
     id: string;
@@ -21,9 +23,9 @@ export default function PageSection({
     heightByContent?: boolean
 }) {
     const style: CSSProperties = {
-        backgroundImage: backgroundColor
+        backgroundImage: !backgroundVideo && backgroundColor
             ? `${backgroundColor}, ${backgroundImage}`
-            : backgroundImage,
+            : !backgroundVideo ? backgroundImage : undefined,
     };
 
     const scrollDownHref = nextPageId
@@ -40,6 +42,22 @@ export default function PageSection({
             full-height={`${fullHeightOnMobile}`}
             height-by-content={`${heightByContent}`}
         >
+            {backgroundVideo && (
+                <>
+                    <video 
+                        className={styles["background-video"]}
+                        autoPlay 
+                        muted 
+                        loop 
+                        playsInline
+                    >
+                        <source src={backgroundVideo} type="video/mp4" />
+                    </video>
+                    {backgroundColor && (
+                        <div className={styles["video-overlay"]} style={{ background: backgroundColor }}></div>
+                    )}
+                </>
+            )}
             {children}
             {nextPageId && (
                 <a className={styles["scroll-down"]} href={scrollDownHref}>

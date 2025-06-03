@@ -6,6 +6,7 @@
 
 .face-text {
     text-transform: uppercase;
+    letter-spacing: -0.03;
 }
 
 .tags-container {

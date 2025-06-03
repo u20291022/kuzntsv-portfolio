@@ -1,0 +1,83 @@
+.loading-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: var(--vh-compensation);
+    background-color: var(--background-color);
+    opacity: 1;
+    z-index: 5000;
+}
+.loading-container[fade-out=true] {
+    animation: loadEnd 1.5s linear forwards;
+}
+
+@keyframes loadEnd {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.names-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.name-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+}
+
+.firstname {
+    transform: translateY(50%);
+    animation: slideUpFirstname 1s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+@keyframes slideUpFirstname {
+    0% { transform: translateY(50%); opacity: 0; }
+    100% { transform: translateY(0%); opacity: 1;}
+}
+
+.lastname {
+    transform: translateX(25%) translateY(200%) scale(1.5);
+    animation: slideUpLastname 1s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+@keyframes slideUpLastname {
+    0% { transform: translateX(25%) translateY(200%) scale(1.5); opacity: 0; }
+    100% { transform: translateX(25%) translateY(30%) scale(1.5); opacity: 1; }
+}
+
+.loading-cirlce-container {
+    position: absolute;
+    bottom: 48px;
+    left: 48px;
+}
+
+.loading-circle {
+    width: 52px;
+    height: 52px;
+    border: 2px solid yellow;
+    border-radius: 100%;
+    animation: rotation 1s linear infinite;
+}
+.small-circle {
+    position: relative;
+    top: 6px;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--text-color);
+    border-radius: 100%;
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}

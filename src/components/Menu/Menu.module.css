@@ -1,0 +1,78 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    color: #ffffff;
+    z-index: 9999;
+    
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-out;
+}
+
+.overlay.open {
+    transform: translateY(0);
+}
+
+.closeButton {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    z-index: 1;
+}
+
+.closeIcon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.closeIcon:before, .closeIcon:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    top: 50%;
+    left: 0;
+}
+
+.closeIcon:before {
+    transform: rotate(45deg);
+}
+
+.closeIcon:after {
+    transform: rotate(-45deg);
+}
+
+.closeButton:hover .closeIcon {
+    transform: rotate(90deg);
+}
+
+.backgroundImage {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-image: url('https://optim.tildacdn.com/tild3265-6361-4763-b631-373332316562/-/format/webp/ben-allan-bHsLYa7nno.jpg.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.backgroundImage.show {
+    opacity: 0.5;
+}
